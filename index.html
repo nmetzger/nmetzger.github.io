@@ -5,91 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
   </head>
-  
   <body>
     
     <!-- TOP NAVIGATION -->
     <nav>
-      <img src="images/logo-sm.png" alt="Personal logo">Natalie Metzger 
-      <a href="index.html">work</a> | <a href="about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
+        <div class="nav-logo">
+          <img src="images/logo-sm.png" alt="Personal logo">
+        </div>
+        
+        <div class="nav-name">
+          Natalie Metzger 
+        </div>
+      
+        <div class="nav-menu"><img src="images/hamburger.png"></div>
+
+        <div class="nav-links">
+          <a href="index.html">work</a> | <a href="about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
+        </div>
     </nav>
   
     <!-- HERO -->
-    <header>
-      <section>
-        <img src="images/portrait.jpg" alt="Portrait image">
+    <header class="hero">
+      <section class="portrait">
+        <img src="images/portrait-sm.png" alt="Portrait image">
       </section>
-      <section>
-        <img src="images/logo.png" alt="Personal logo icon">
-        <h4>Natalie Metzger</h4>
-        <h1>designer/illustrator</h1>
-        <p>I’m a Portland Area-based visual/UX designer & illustrator with a passion to understand people’s needs, to design friendly solution, and to help people tell their stories. With a background in technology and design, I love to find the intersection between these two disciplines.</p>
+      <section class="hero-copy">
+        <h4><img src="images/logo.png" alt="Personal logo icon">Natalie Metzger</h4>
+        <h2>designer<span>/</span></h2>
+        <h1>illustrator</h1>
+        <p>I’m a Portland Area-based visual/UX designer &amp; illustrator with a passion to understand people’s needs, to design friendly solution, and to help people tell their stories. With a background in technology and design, I love to find the intersection between these two disciplines.</p>
       </section>
+      <div class="hero-stripe"></div>
     </header>
     
     <!-- PROJECTS -->
-    <main>
-
-      <article>
-        <section>
-          <h3>Brainspace</h3>
-          <p>A cloud-based content collection and creation service.</p>
-          <a href="projects/case-study-brainspace.html">View Projects</a>
-        </section>
-        
-        <section>
+    <main class="projects">
+      
+      <!-- Brainspace Project -->
+      <article class="project-brainspace">  
+        <section class="project-image-sm">
           <img src="images/brainspace.jpg" alt="Brainspace project graphic">
         </section>
+        <section class="project-brainspace-copy">
+          <h3>Brainspace</h3>
+          <p>A cloud-based content collection and creation service.</p>
+          <div class="link-button"><a href="projects/case-study-brainspace.html">View Case Study</a></div>
+        </section>
+        <div class="project-brainspace-gap"><div class="project-brainspace-lg"></div></div>
       </article>
       
-      <article>
-        <section>
-          <h3>Bloc Jams</h3>
-          <p>A simple web-based music player utilizing jQuery and the DOM.</p>
-          <a href="case-study-blocjams.html">View Projects</a>
-        </section>
-        
-        <section>
+      
+      <!-- Bloc Jams Project -->
+      <article class="project-blocjams">
+        <section class="project-image-sm">
           <img src="images/bloc-jams.jpg" alt="Bloc Jams project graphic">
         </section>
+        <div class="project-blocjams-gap"><div class="project-blocjams-lg"></div></div>
+        <section class="project-blocjams-copy">
+          <h3>Bloc Jams</h3>
+          <p>A simple web-based music player utilizing jQuery and DOM.</p>
+          <div class="link-button">View Case Study</div>
+        </section>
       </article>
       
-      <article>
-        <section>
-          <h3>Action Cats</h3>
-          <p>A party game about the secret life of cats.</p>
-          <a href="case-study-actioncats.html">View Projects</a>
-        </section>
-                  
-        <section>
+      
+      <!-- Action Cats Project -->
+      <article class="project-actioncats">
+        <section class="project-image-sm">
           <img src="images/action-cats.jpg" alt="Action Cats project graphic">
         </section>
+        <section class="project-actioncats-copy">
+          <h3>Action Cats</h3>
+          <p>A party game about the secret life of cats.</p>
+          <div class="link-button">View Case Study</div>
+        </section>     
+        <div class="project-actioncats-gap"><div class="project-actioncats-lg"></div></div>
       </article>
       
-      <article>
-        <section>
-          <h3>Illustrations</h3>
-          <p>Visual design and illustrations for various projects.</p>
-          <a href="illustrations.html">View Projects</a>
-        </section>
-        
-        <section>
+      
+      <!-- Illustration Projects -->
+      <article class="project-illustrations">
+        <section class="project-image-sm">
           <img src="images/illustrations.jpg" alt="Illustrations section graphic">
         </section>
+        <div class="project-illustrations-gap"><div class="project-illustrations-lg"></div></div>
+        <section class="project-illustrations-copy">
+          <h3>Illustrations</h3>
+          <p>Visual design and illustrations for various projects.</p>
+          <div class="link-button">View Projects</div>
+        </section>
       </article>
+      
     </main>
     
     <!-- FOOTER -->
+    <div class="bottom-stripe"></div>
     <footer>
-      <section>
+      <section class="footer-logo">
         <img src="images/logo-yellow.png" alt="Yellow personal logo">
       </section>  
-      <h3>Connect</h3>
-      <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
-      <section>
+      <section class="footer-connect">
+        <h3>Connect</h3>
+        <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
+      </section>
+      <section class="social-buttons">
         <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
         <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
         <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>

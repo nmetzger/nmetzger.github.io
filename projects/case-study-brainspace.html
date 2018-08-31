@@ -1,121 +1,168 @@
 <!DOCTYPE html>
-<html  lang="en">
+<html lang="en">
   <head>
     <title>Portfolio | Natalie Metzger</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css"> 
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+
   </head>
-  
   <body>
     
     <!-- TOP NAVIGATION -->
     <nav>
-      <img src="../images/logo-sm.png" alt="personal logo">Natalie Metzger 
-      <a href="../index.html">work</a> | <a href="../about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
+      <div class="nav-logo">
+        <img src="../images/logo-sm.png" alt="Personal logo">
+      </div>
+
+      <div class="nav-name">
+        Natalie Metzger 
+      </div>
+
+      <div class="nav-menu"><img src="../images/hamburger.png"></div>
+
+      <div class="nav-links">
+        <a href="../index.html">work</a> | <a href="../about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
+      </div>
     </nav>
     
-    <main>
+    <main class="case-study-page">
       <header>
-        <h2>Case Study</h2>
-        <h1>Brainspace</h1>
-        <p>Brainspace is a cloud-based storage and content management application providing a clean and simple place to collect, organize, and share files, images, and links while also allowing users to create and collaborate with others.</p>
-        <a href="https://invis.io/WSNPYSEYZ7E">View Prototype</a>
-        <img src="../images/brainspace-images/mockup-all.png" alt="Brainspace mockups">
+        <section class="case-study-label">
+          <h4>Case Study</h4>
+        </section>
+        <section class="case-study-copy">
+          <h2>Brainspace</h2>
+          <p>Brainspace is a cloud-based storage and content management application providing a clean and simple place to collect, organize, and share files, images, and links while also allowing users to create and collaborate with others.</p>
+          <div class="link-button"><a href="https://invis.io/WSNPYSEYZ7E">View Prototype</a></div>
+        </section>
+        <div class="bottom-stripe"></div>
+        <div class="case-study-image">
+          <img src="../images/brainspace-images/mockup-all.png" alt="Brainspace mockups">
+        </div>
       </header>
       
-      <article>
-        <section>
+      <article class="roles">
+        <section class="case-study-section">
           <img src="../images/icons_roles.png" alt="Roles section icon">
-          <h3>Roles</h3> UX Design, Visual Design, Branding
-        </section>  
-        <section>
+          <h3>Roles</h3> 
+          <hr>
+          <p>UX Design</p>
+          <p>Visual Design</p>
+          <p>Branding</p>
+
           <img src="../images/icons_deliverables.png" alt="Deliverables section icon">
-          <h3>Deliverables</h3> User Surveys, Personas, Competitive Analysis, User Stories and Flows, Wireframes, Branding and Identity, User Testing, Visual Design, High Fidelity Prototype
-        </section>
-        <section>
+          <h3>Deliverables</h3>
+          <hr>
+          <p>User Surveys</p>
+          <p>Personas</p>
+          <p>Competitive Analysis</p>
+          <p>User Stories and Flows</p>
+          <p>Wireframes</p>
+          <p>Branding and Identity</p>
+          <p>User Testing</p>
+          <p>Visual Design</p>
+          <p>High Fidelity Prototype</p>
+
           <img src="../images/icons_specs.png" alt="Specifications section icon">
           <h3>Specs</h3>
-          <h4>Duration</h4> 118 hrs
-          <h4>Tools</h4> Google Suite, Sketch, InVision, UsabilityHub, Adobe Illustrator
+          <hr>
+          <h5>Duration</h5> 
+          <p>118 hrs</p>
+          <br>
+          <h5>Tools</h5> 
+          <p>Google Suite</p>
+          <p>Sketch</p>
+          <p>InVision</p>
+          <p>UsabilityHub</p>
+          <p>Adobe Illustrator</p>
         </section>  
       </article>
 
-      <article>
-        <section>
-          <h2>Problem</h2>
-          There are many existing separate cloud storage services that allow collection of content, content storage, content creation and collaboration, but no service that does all these things in one unified space. Having to navigate between all these services to find a single saved item is time consuming, frustrating, and confusing.
+      <article class="case-study-problem">
+        <section class="case-study-section">
+          <img src="../images/icons_problem.png">
+          <h3>Problem</h3>
+          <p>There are many existing separate cloud storage services that allow collection of content, content storage, content creation and collaboration, but no service that does all these things in one unified space. Having to navigate between all these services to find a single saved item is time consuming, frustrating, and confusing.</p>
 
-          <h2>Solution</h2>
-          Brainspace aims to streamline and contain the ability to simply and easily collect content, create content, and collaborate in one centralized location instead of over many different applications. It allows users to save images, links, upload and access user files, create notes, and collaborate with others on those notes with a clean and simple interface.
+          <img src="../images/icons_solution.png">
+          <h3>Solution</h3>
+          <p>Brainspace aims to streamline and contain the ability to simply and easily collect content, create content, and collaborate in one centralized location instead of over many different applications. It allows users to save images, links, upload and access user files, create notes, and collaborate with others on those notes with a clean and simple interface.</p>
         </section>
         
-        <section>
+        <div class="stripe"></div>
+        
+        <section class="solution-image">
           <img src="../images/brainspace-images/Landing-Page.png" alt="Landing page mockup image">
         </section>
       </article>
       
-      <article>
-        <section>
+      <article class="case-study-details">
+        <section class="case-study-section">
           <img src="../images/icons_survey.png" alt="Survey section icon">
-          <h2>User Surveys</h2>
-          I started my research with by surveying users to gain insight into how the current user base currently used cloud storage, what they liked about the services they used, and what were their pain points. Additionally, key behaviors in how users collected and used cloud saved content, basic demographics, and key use needs in cloud storage services was explored.
+          <h3>User Surveys</h3>
+          <p>I started my research with by surveying users to gain insight into how the current user base currently used cloud storage, what they liked about the services they used, and what were their pain points. Additionally, key behaviors in how users collected and used cloud saved content, basic demographics, and key use needs in cloud storage services was explored.
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_tools.png" alt="Features section icon">
-          <h3>Features/Tools</h3>
-          Through this survey, presented to eighteen individuals, a few trends were uncovered. Over all groups, the following features were consistently marked as high importance for a cloud storage app.
+          <h6>Features/Tools</h6>
+          <p>Through this survey, presented to eighteen individuals, a few trends were uncovered. Over all groups, the following features were consistently marked as high importance for a cloud storage app.</p>
 
-          There was a high indication that content collaboration/sharing,  multiplatform access, and syncing were important features (100%). Additionally, users stated that they preferred folders as their method of content organization (90%). 
+          <p>There was a high indication that content collaboration/sharing,  multiplatform access, and syncing were important features (100%). Additionally, users stated that they preferred folders as their method of content organization (90%). </p>
 
-          The option to use a cloud storage application for free was overwhelmingly what users enjoyed the most about cloud storage. While 26% indicated that 50GB of data would be the minimum they would consider paying, 32% stated they were willing to pay $0.99/month for that storage. 
+          <p>The option to use a cloud storage application for free was overwhelmingly what users enjoyed the most about cloud storage. While 26% indicated that 50GB of data would be the minimum they would consider paying, 32% stated they were willing to pay $0.99/month for that storage. </p>
         </section>
 
-        <section>
-          When asked about how they used online storage, 79% stated they often have the need for creating/editing content online, 74% indicated they were not interested in sharing their saved content via social media, 79% indicated they preferred to share via email—this was an interesting discovery because the client thought social media sharing was something their users would want—and 40% indicated they wished current services had better organizational tools.
-                    
-          <img src="../images/brainspace-images/graph.png" alt="Survey graph image">
+        <section class="case-study-highlight">
+          <p>When asked about how they used online storage, 79% stated they often have the need for creating/editing content online, 74% indicated they were not interested in sharing their saved content via social media, 79% indicated they preferred to share via email—this was an interesting discovery because the client thought social media sharing was something their users would want—and 40% indicated they wished current services had better organizational tools.</p>
+                  
+          <div id="stats-image" class="case-study-image">            
+            <img src="../images/brainspace-images/graph.png" alt="Survey graph image">
+          </div>
         </section>
 
-        <section>
+
+        <section class="case-study-section">
           <img src="../images/icons_pain-points.png" alt="Pain Points section icon">
-          <h3>Pain Points</h3>
-          Users indicated the following as causing most of their frustrations using cloud storage apps:
-          Poor security/privacy
-          Poor content organization/searching features
-          Content accessed across devices not synchronized
-          Confusing/difficult UI
+          <h6>Pain Points</h6>
+          <p>Users indicated the following as causing most of their frustrations using cloud storage apps:</p>
+          <ul>
+            <li>Poor security/privacy</li>
+            <li>Poor content organization/searching features</li>
+            <li>Content accessed across devices not synchronized</li>
+            <li>Confusing/difficult UI</li>
+          </ul>
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_persona.png" alt="Persona section icon">
-          <h2>User Personas</h2>
-          Based upon the user survey results, three key personas were developed to highlight the most common user needs. The goal with the personas was to understand and empathize with the user’s needs and experiences in relation to how they would interact with the service.
+          <h3>User Personas</h3>
+          <p>Based upon the user survey results, three key personas were developed to highlight the most common user needs. The goal with the personas was to understand and empathize with the user’s needs and experiences in relation to how they would interact with the service.</p>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/personas2.jpg" alt="Persona cards image">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/personas2.jpg" alt="Persona cards image">
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_research.png" alt="Competitive Analysis section icon">
-          <h2>Competitive Analysis</h2>
-          To determine where Brainspace would sit in the current market place, I started with an analysis--exploring SWOT, pricing, user feedback, and audience positioning--of the current competitive landscape to reveal opportunities Brainbox could capture. Using the client’s requirements, and the most popular services as indicated by the user survey as a guide, I looked at the top three players for those features. 
+          <h3>Competitive Analysis</h3>
+          <p>To determine where Brainspace would sit in the current market place, I started with an analysis--exploring SWOT, pricing, user feedback, and audience positioning--of the current competitive landscape to reveal opportunities Brainbox could capture. Using the client’s requirements, and the most popular services as indicated by the user survey as a guide, I looked at the top three players for those features. <a href="https://drive.google.com/open?id=1yTw5FaGfh3jCvn-VN3ceCw6SCKE6t-k65Map7UQPB18">View full competitive analysis.</a></p>
 
-          It was discovered that the competitors’ user base was slanted towards business teams and each tried to carve out their own unique niche in the market by focusing on a specific tight grouping of related features. The opportunity presented was for one centralized location with a simple, intuitive, and organized interface where everyday users could control all their content.
-          <a href="">View full competitive analysis.</a>
+          <p>It was discovered that the competitors’ user base was slanted towards business teams and each tried to carve out their own unique niche in the market by focusing on a specific tight grouping of related features. The opportunity presented was for one centralized location with a simple, intuitive, and organized interface where everyday users could control all their content.</p>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/comp.jpg" alt="Competitors image - Google, Dropbox, Evernote">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/comp.jpg" alt="Competitors image - Google, Dropbox, Evernote">
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_mvp.png" alt="MVP section icon">
-          <h3>MVP Priorities</h3>
+          <h6>MVP Priorities</h6>
           <ul>
             <li>Clean/easy interface</li>
             <li>Strong content organizational features</li>
@@ -126,50 +173,50 @@
           </ul>
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_stories.png" alt="User Stories section icon">
-          <h2>User Stories</h2> 
-          With the business requirements and the motivations, goals, and pain points identified in the user personas, <a href="">user stories</a> were created for these tasks. 
+          <h3>User Stories</h3> 
+          <p>With the business requirements and the motivations, goals, and pain points identified in the user personas, <a href="https://drive.google.com/open?id=1RdO37YW90Xiuj2gEXhhNrghnU5CvNO93MLa-dfKWctI">user stories</a> were created for these tasks.</p> 
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/stories.jpg" alt="User stories abstract graphic">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/stories.jpg" alt="User stories abstract graphic">
         </section>
           
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_flows.png" alt="User Flows section icon">
-          <h2>User Flows</h2>
-          The resulting user flows built out from the highest priority user tasks guided the essentials of what Brainspace’s MVP should contain. View the full set of <a href="">sketches</a> and <a href="">final flows</a>.
+          <h3>User Flows</h3>
+          <p>The resulting user flows built out from the highest priority user tasks guided the essentials of what Brainspace’s MVP should contain. View the full set of <a href="https://drive.google.com/open?id=1as-8hCYTnyyIehFmDqwwyRTLpz_RXGKP">sketches</a> and <a href="https://drive.google.com/open?id=1Z6UgFzM_RbY4bpPtJ3FuSFj2aOFf_Lsy">final flows</a>.</p>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/flows.jpg" alt="User stories sketch and final graphic">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/flows.jpg" alt="User stories sketch and final graphic">
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_map.png" alt="Sitemap section icon">
-          <h2>Sitemap</h2>
-          Following the userflows, a sitemap was designed to visualize how all these user flows would integrate with each together in a simple functional site. Several iterations were required to work out the most intuitive flow through the product’s site and to determine the best hierarchy for the product’s functionality. View the <a href="">full size of draft</a> and <a href="">full size of final</a> sitemap.
+          <h3>Sitemap</h3>
+          <p>Following the userflows, a sitemap was designed to visualize how all these user flows would integrate with each together in a simple functional site. Several iterations were required to work out the most intuitive flow through the product’s site and to determine the best hierarchy for the product’s functionality. View the <a href="">full size of draft</a> and <a href="https://drive.google.com/open?id=1WMn-khV5DAFQZMuwMC32YW7fpFv4KYcA">full size of final</a> sitemap.</p>
         </section>
 
-        <section>
-          <img src="../images/brainspace-images/sitemap.jpg" alt="Sitemap iteration graphic">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/sitemap.jpg" alt="Sitemap iteration graphic">
         </section>
         
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_wires.png" alt="Wireframes section icon">
-          <h2>Wireframes</h2>
-          Before jumping into the low-fidelity wireframes, <a href="">sketched versions</a> were conceptualized to determine which layouts would best meet the needs of the users while remaining simple and easy to navigate. 
+          <h3>Wireframes</h3>
+          <p>Before jumping into the low-fidelity wireframes, <a href="https://drive.google.com/open?id=10VrGbsgtV6tLfaRN-4a8WXRPYTR8qiQn">sketched versions</a> were conceptualized to determine which layouts would best meet the needs of the users while remaining simple and easy to navigate.</p> 
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/wire-sketch.jpg" alt="Wireframes sketches">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/wire-sketch.jpg" alt="Wireframes sketches">
         </section>
         
-        <section>
-          Using the sitemap, sketches, and client project requirements, <a href="">low-fidelity wireframes</a> were built for the Brainspace MVP. This build was then converted into a clickable prototype and tested on users to determine if navigation and UI was easy to use and functional, and if the product’s purpose was quickly and effectively conveyed to the users.
+        <section class="case-study-sub-section">
+          <p>Using the sitemap, sketches, and client project requirements, <a href="https://drive.google.com/open?id=1phxDxJpdHVfxcU0Uo5fXLSosyurylnMD">low-fidelity wireframes</a> were built for the Brainspace MVP. This build was then converted into a clickable prototype and tested on users to determine if navigation and UI was easy to use and functional, and if the product’s purpose was quickly and effectively conveyed to the users.</p>
 
-          Through the testing process several issues with the navigation flow were discovered and adjusted accordingly in future revisions. The top action items were:
+          <p>Through the testing process several issues with the navigation flow were discovered and adjusted accordingly in future revisions. The top action items were:</p>
           <ul>
             <li>Rework side navigation filters</li>
             <li>Indication on account page that starter plan is free</li>
@@ -179,41 +226,42 @@
           </ul>
         </section>
 
-        <section>
-          <img src="../images/brainspace-images/wireframes-lofi.jpg" alt="Wireframes low-fidelity design">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/wireframes-lofi.jpg" alt="Wireframes low-fidelity design">
         </section>
         
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_branding.png" alt="Branding section icon">
-          <h2>Branding</h2> 
-          Looking at the current cloud storage service landscape, the branding for this product needed to differentiate itself while also eliciting the purpose of this new service. Many names were explored before eventually upon “Brainspace” to bring to mind a place to store all the content a user wants to remember. The feeling developed for this concept was spacious, simple, smart, thoughtful, fun, and open mind with the gap imagery in the logo mark. The brain inspired logo mark was also designed in a way to mimic cloud iconography, thus pulling in the idea of “the cloud” and all that entails. Additionally, the two halves of the brain invoke feelings of coming together and collaboration. The effectiveness of the brand’s goals were confirmed through user preference testing.
+          <h3>Branding</h3> 
+          <p>Looking at the current cloud storage service landscape, the branding for this product needed to differentiate itself while also eliciting the purpose of this new service. Many names were explored before eventually upon “Brainspace” to bring to mind a place to store all the content a user wants to remember. The feeling developed for this concept was spacious, simple, smart, thoughtful, fun, and open mind with the gap imagery in the logo mark. The brain inspired logo mark was also designed in a way to mimic cloud iconography, thus pulling in the idea of “the cloud” and all that entails. Additionally, the two halves of the brain invoke feelings of coming together and collaboration. The effectiveness of the brand’s goals were confirmed through user preference testing.</p>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/brand-sketch.jpg" alt="Branding sketches">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/brand-sketch.jpg" alt="Branding sketches">
         </section>
 
-        <section>
-          Preference testing on my top three logo choices determined the final look. 80% of users selected the Brainspace name and logo.
-          <div>
-            “I like that it suggest brain and cloud, which makes me think of smart and organized.”
+        <section class="case-study-highlight">
+          <p>Preference testing on my top three logo choices determined the final look. 80% of users selected the Brainspace name and logo.</p>
+          
+          <div class="user-quotes">
+            <p>“I like that it suggest brain and cloud, which makes me think of smart and organized.”</p>
 
-            “It looks...thinky, brainy; there are two halves, and the "space" in the name implies a shared experience, reinforcing the two halves imagery.”
+            <p>“It looks...thinky, brainy; there are two halves, and the 'space' in the name implies a shared experience, reinforcing the two halves imagery.”</p>
 
-            “Totally relate to brain space as I want good storage/organization so I have the brain space to be creative.”
+            <p>“Totally relate to brain space as I want good storage/organization so I have the brain space to be creative.”</p>
           </div>
 
-          With the logo finalized, the brand identity was built to complement and reinforce the feelings and functionality evoked through the logo. A style guide was developed with typography, colors, and UI elements to emphasize the core aspects of the Brainspace brand, namely fun, creative, intelligence, simplicity and collaboration.
+          <p>With the logo finalized, the brand identity was built to complement and reinforce the feelings and functionality evoked through the logo. A style guide was developed with typography, colors, and UI elements to emphasize the core aspects of the Brainspace brand, namely fun, creative, intelligence, simplicity and collaboration.</p>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/logo.jpg" alt="Brainspace logo and styleguide graphic">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/logo.jpg" alt="Brainspace logo and styleguide graphic">
         </section>
 
-        <section>
+        <section class="case-study-section">
           <img src="../images/icons_design.png" alt="Visual design section icon">
-          <h2>Visual Design</h2>
-          As the product was converted to a high-fidelity design, iterations were presented to users through preference testing to further refine the design for the most effective user experiences. Additionally, more user testing was performed as this stage to catch any issues and to gather more data on how user’s experienced the site. Through this additional testing the design was further refined with these top action items users identified as needed further attention:
+          <h3>Visual Design</h3>
+          <p>As the product was converted to a high-fidelity design, iterations were presented to users through preference testing to further refine the design for the most effective user experiences. Additionally, more user testing was performed as this stage to catch any issues and to gather more data on how user’s experienced the site. Through this additional testing the design was further refined with these top action items users identified as needed further attention:</p>
           <ul>
             <li>Clearly identify ToS test as a link</li>
             <li>Add signup and login links at the bottom of the landing page</li>
@@ -221,23 +269,23 @@
             <li>Make a new smaller section to downgrade account once the account has been upgraded</li>
           </ul>
 
-          <a href="https://invis.io/WSNPYSEYZ7E">Clickable Prototype (mobile version)</a>
+          <div class="link-button"><a href="https://invis.io/WSNPYSEYZ7E">View Prototype</a></div>
         </section>
         
-        <section>
-          <img src="../images/brainspace-images/hi-fi.png" alt="Brainspace mockup high-fidelity images">
+        <section class="case-study-image">
+            <img src="../images/brainspace-images/hi-fi.png" alt="Brainspace mockup high-fidelity images">
         </section>
       </article>
       
-      <article>
-        <section>
+      <article class="case-study-conclusion">
+        <section class="case-study-section">
           <img src="../images/icons_conclusion.png" alt="Conclusion section icon">
-          <h2>Conclusion</h2>
-          The end result was a proof of concept that tied both the business requirements and user research derived usability requirements into a user friendly lightweight MVP. Through this process it became clear how cruital user testing is to the design process to make sure that the design works from a functionality and over all UX standpoint, to confirm the viability and feasibility of the client’s requirements within their target user base, and to also uncover opportunities that would be beneficial to the project. Iteration through user feedback loops were the most informative parts of this project.
+          <h3>Conclusion</h3>
+          <p>The end result was a proof of concept that tied both the business requirements and user research derived usability requirements into a user friendly lightweight MVP. Through this process it became clear how cruital user testing is to the design process to make sure that the design works from a functionality and over all UX standpoint, to confirm the viability and feasibility of the client’s requirements within their target user base, and to also uncover opportunities that would be beneficial to the project. Iteration through user feedback loops were the most informative parts of this project.</p>
 
-          A significant challenge of this project was the ambiguity of the client’s requirements and the lack of market research to support the business requirements of the product. Without such research, there was some division in the user wants and desires discovered in my survey research and the client’s feature requirements which may result in less than optimal adoption in such a highly saturated competitive environment.
+          <p>A significant challenge of this project was the ambiguity of the client’s requirements and the lack of market research to support the business requirements of the product. Without such research, there was some division in the user wants and desires discovered in my survey research and the client’s feature requirements which may result in less than optimal adoption in such a highly saturated competitive environment.</p>
 
-          With additional time and resources, I would build out additional test screens and conduct user testing to cover all of the product’s features including searching, filtering content, expanded collaboration, and note creating/editing. I would also build out and test the web version to discover any stumbling blocks to be solved with this responsive site.
+          <p>With additional time and resources, I would build out additional test screens and conduct user testing to cover all of the product’s features including searching, filtering content, expanded collaboration, and note creating/editing. I would also build out and test the web version to discover any stumbling blocks to be solved with this responsive site.</p>
         </section>
       </article>
       
@@ -245,15 +293,18 @@
     </main>
     
     <!-- FOOTER -->
+    <div class="bottom-stripe"></div>
     <footer>
-      <section>
+      <section class="footer-logo">
         <img src="../images/logo-yellow.png" alt="Yellow personal logo">
       </section>  
-      <h3>Connect</h3>
-      <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
-      <section>
+      <section class="footer-connect">
+        <h3>Connect</h3>
+        <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
+      </section>
+      <section class="social-buttons">
         <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="../images/social-linkedin.png" alt="LinkedIn icon"></a>
-        <a href="https://github.com/nmetzger"><img src="../images/social-github.png" alt="Github icon"></a>
+        <a href="https://github.com/nmetzger"><img src="../images/social-github.png" alt="GitHub icon"></a>
         <a href="https://www.instagram.com/thefuzzyslug/"><img src="../images/social-instagram.png" alt="Instagram icon"></a>
         <a href="https://twitter.com/minitotoro"><img src="../images/social-twitter.png" alt="Twitter icon"></a>
         <a href="https://www.facebook.com/nsjmetzger"><img src="../images/social-facebook.png" alt="Facebook icon"></a>
