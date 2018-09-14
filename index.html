@@ -13,39 +13,45 @@
   <body>
     
     <!-- TOP NAVIGATION -->
-    <nav>
-        <div class="nav-logo">
-          <img src="images/logo-sm.png" alt="Personal logo">
-        </div>
-        
-        <div class="nav-name">
-          Natalie Metzger 
-        </div>
-      
-        <div class="nav-menu"><img src="images/hamburger.png"></div>
+    <div class="nav-container">
+      <nav>
+          <a href="index.html"><img src="images/logo-sm.png" class="nav-logo" alt="Personal logo"></a>
+          <div class="nav-name">
+                <a href="index.html">Natalie Metzger</a> 
+          </div>
+          <!-- hidden checkbox is used as click reciever for :checked selector -->
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
 
-        <div class="nav-links">
-          <a href="index.html">work</a> | <a href="about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
-        </div>
-    </nav>
+          <!-- label class used for tageting the checkbox -->
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+          <ul class="menu">
+            <li><a href="index.html">work</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="mailto:natalie@thefuzzyslug.com">contact</a></li>
+          </ul>
+      </nav>
+    </div>
   
-    <!-- HERO -->
-    <header class="hero">
-      <section class="portrait">
-        <img src="images/portrait-sm.png" alt="Portrait image">
-      </section>
-      <section class="hero-copy">
-        <h4><img src="images/logo.png" alt="Personal logo icon">Natalie Metzger</h4>
-        <h2>designer<span>/</span></h2>
-        <h1>illustrator</h1>
-        <p>I’m a Portland Area-based visual/UX designer &amp; illustrator with a passion to understand people’s needs, to design friendly solution, and to help people tell their stories. With a background in technology and design, I love to find the intersection between these two disciplines.</p>
-      </section>
-      <div class="hero-stripe"></div>
-    </header>
-    
-    <!-- PROJECTS -->
-    <main class="projects">
-      
+    <div class="container">
+      <!-- HERO -->
+      <div class="portrait-lg"></div>
+      <header class="hero">
+        <section class="portrait">
+          <img src="images/portrait-sm.png" alt="Portrait image">
+        </section>
+        <section class="hero-copy">
+          <h4><img src="images/logo.png" alt="Personal logo icon">Natalie Metzger</h4>
+          <h2>designer<span>/</span></h2>
+          <h1>illustrator</h1>
+          <p>I’m a Portland Area-based visual/UX designer &amp; illustrator with a passion to understand people’s needs, to design friendly solution, and to help people tell their stories. With a background in technology and design, I love to find the intersection between these two disciplines.</p>
+        </section>
+        <div class="hero-stripe"></div>
+      </header>
+
+      <!-- PROJECTS -->
+      <!--main class="projects"-->
+
       <!-- Brainspace Project -->
       <article class="project-brainspace">  
         <section class="project-image-sm">
@@ -58,8 +64,8 @@
         </section>
         <div class="project-brainspace-gap"><div class="project-brainspace-lg"></div></div>
       </article>
-      
-      
+
+
       <!-- Bloc Jams Project -->
       <article class="project-blocjams">
         <section class="project-image-sm">
@@ -68,12 +74,12 @@
         <div class="project-blocjams-gap"><div class="project-blocjams-lg"></div></div>
         <section class="project-blocjams-copy">
           <h3>Bloc Jams</h3>
-          <p>A simple web-based music player utilizing jQuery and DOM.</p>
+          <p>A simple web-based music player utilizing jQuery/DOM.</p>
           <div class="link-button">View Case Study</div>
         </section>
       </article>
-      
-      
+
+
       <!-- Action Cats Project -->
       <article class="project-actioncats">
         <section class="project-image-sm">
@@ -86,8 +92,8 @@
         </section>     
         <div class="project-actioncats-gap"><div class="project-actioncats-lg"></div></div>
       </article>
-      
-      
+
+
       <!-- Illustration Projects -->
       <article class="project-illustrations">
         <section class="project-image-sm">
@@ -97,30 +103,31 @@
         <section class="project-illustrations-copy">
           <h3>Illustrations</h3>
           <p>Visual design and illustrations for various projects.</p>
-          <div class="link-button">View Projects</div>
+          <a href="http://www.thefuzzyslug.com/work"><div class="link-button">View Projects</div></a>
         </section>
       </article>
-      
-    </main>
+
+    <!--/main-->
+    
     
     <!-- FOOTER -->
-    <div class="bottom-stripe"></div>
-    <footer>
-      <section class="footer-logo">
-        <img src="images/logo-yellow.png" alt="Yellow personal logo">
-      </section>  
-      <section class="footer-connect">
-        <h3>Connect</h3>
-        <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
-      </section>
-      <section class="social-buttons">
-        <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
-        <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
-        <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>
-        <a href="https://twitter.com/minitotoro"><img src="images/social-twitter.png" alt="Twitter icon"></a>
-        <a href="https://www.facebook.com/nsjmetzger"><img src="images/social-facebook.png" alt="Facebook icon"></a>
-      </section>
-    </footer>
-  
+      <div class="bottom-stripe"></div>
+      <footer>
+        <section class="footer-logo">
+          <img src="images/logo-yellow.png" alt="Yellow personal logo">
+        </section>  
+        <section class="footer-connect">
+          <h3>Connect</h3>
+          <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
+        </section>
+        <section class="social-buttons">
+          <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
+          <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
+          <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>
+          <a href="https://twitter.com/minitotoro"><img src="images/social-twitter.png" alt="Twitter icon"></a>
+          <a href="https://www.facebook.com/nsjmetzger"><img src="images/social-facebook.png" alt="Facebook icon"></a>
+        </section>
+      </footer>
+    </div> <!-- END CONTAINER -->
   </body>
 </html>

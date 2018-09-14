@@ -1,56 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Portfolio | Natalie Metzger</title>
+    <title>Portfolio | Natalie Metzger | About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
   </head>
-  
   <body>
     
     <!-- TOP NAVIGATION -->
-    <nav>
-      <img src="images/logo-sm.png" alt="Personal logo">Natalie Metzger 
-      <a href="index.html">work</a> | <a href="about.html">about</a> | <a href="mailto:natalie@thefuzzyslug.com">contact</a>
-    </nav>
+    <div class="nav-container">
+      <nav>
+          <a href="index.html"><img src="images/logo-sm.png" class="nav-logo" alt="Personal logo"></a>
+          <div class="nav-name">
+                <a href="index.html">Natalie Metzger</a> 
+          </div>
+          <!-- hidden checkbox is used as click reciever for :checked selector -->
+          <input class="menu-btn" type="checkbox" id="menu-btn" />
+
+          <!-- label class used for tageting the checkbox -->
+          <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+
+          <ul class="menu">
+            <li><a href="index.html">work</a></li>
+            <li><a href="about.html">about</a></li>
+            <li><a href="mailto:natalie@thefuzzyslug.com">contact</a></li>
+          </ul>
+      </nav>
+    </div>
     
-    <main>
-      <section>
-        <h2>Hi. I'm Natalie.</h2>
-        I’m maker and a storyteller.
-
-        I grew up always creating. As a child I would fill up every blank paper with fantastical drawings. In highschool I built stories through photography. In college I delighted in solving problems through code and wires, learning the importance of research, testing, and the importance of the user’s experience with the product. I studied the human interaction with technology and discovered my fascination with how people created meaningful experiences with that technology. While I didn’t realize it at the time, this was the beginning of my journey into design.
-
-        I became aware of the complex relationship between people and technology most profoundly as a systems administrator. Every day the importance of the user’s experience was tested with the network and the systems they depended upon. As an advocate for the technology used, I constantly had to ask how was the technology being used, why was it being used in a certain way, and could this experience be better.
-
-        While my analytic side was exploring the world of engineering and IT, my creative side was unsatisfied and yearned for nurturing and growth. I still had a deep love for visual design and illustration, so I spent my nights and weekends on illustration, comic creation, visual design. The more time I spent in the design space, I realized while I had built a long career of listening and helping people solve problems, I was much more satisfied with the solutions I was offering as a designer. I also became aware that the common thread in all my endeavors was my passion to understand people’s needs, to design solutions, to help people tell the stories they needed to tell.
-
-        Now, through design, I can’t wait to help you tell your story.
+    <div class="about-container">
+      
+      <section class="portrait">
+        <img src="images/portrait-sm.png" alt="Portrait graphic">
       </section>
       
-      <section>
-        <img src="images/portrait.jpg" alt="Portrait graphic">
-      </section>
-    </main>
+      <article class="about">
+        <div class="about-copy">
+          <span class="about-title">
+            <h3>Hi. I'm Natalie.</h3>
+            <p>I’m maker and a storyteller.</p>
+          </span>
+
+          <p>I grew up always creating. As a child I would fill up every blank paper with fantastical drawings. In highschool I built stories through photography. In college I delighted in solving problems through code and wires, learning the importance of research, testing, and the importance of the user’s experience with the product. I studied the human interaction with technology and discovered my fascination with how people created meaningful experiences with that technology. While I didn’t realize it at the time, this was the beginning of my journey into design.</p>
+
+          <p>I became aware of the complex relationship between people and technology most profoundly as a systems administrator. Every day the importance of the user’s experience was tested with the network and the systems they depended upon. As an advocate for the technology used, I constantly had to ask how was the technology being used, why was it being used in a certain way, and could this experience be better.</p>
+
+          <p>While my analytic side was exploring the world of engineering and IT, my creative side was unsatisfied and yearned for nurturing and growth. I still had a deep love for visual design and illustration, so I spent my nights and weekends on illustration, comic creation, visual design. The more time I spent in the design space, I realized while I had built a long career of listening and helping people solve problems, I was much more satisfied with the solutions I was offering as a designer. I also became aware that the common thread in all my endeavors was my passion to understand people’s needs, to design solutions, to help people tell the stories they needed to tell.</p>
+
+        <p> Now, through design, I can’t wait to help you tell your story.</p>
+        </div>
+        <div class="about-portrait-gap"><div class="about-portrait-lg"></div></div>
+      </article>
     
     <!-- FOOTER -->
-    <footer>
-      <section>
-        <img src="images/logo-yellow.png" alt="Yellow personal logo">
-      </section>  
-      <h3>Connect</h3>
-      <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
-      <section>
-        <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
-        <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
-        <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>
-        <a href="https://twitter.com/minitotoro"><img src="images/social-twitter.png" alt="Twitter icon"></a>
-        <a href="https://www.facebook.com/nsjmetzger"><img src="images/social-facebook.png" alt="Facebook icon"></a>
-      </section>
-    </footer>
-  
+      <div class="bottom-stripe"></div>
+      <footer>
+        <section class="footer-logo">
+          <img src="images/logo-yellow.png" alt="Yellow personal logo">
+        </section>  
+        <section class="footer-connect">
+          <h3>Connect</h3>
+          <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
+        </section>
+        <section class="social-buttons">
+          <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
+          <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
+          <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>
+          <a href="https://twitter.com/minitotoro"><img src="images/social-twitter.png" alt="Twitter icon"></a>
+          <a href="https://www.facebook.com/nsjmetzger"><img src="images/social-facebook.png" alt="Facebook icon"></a>
+        </section>
+      </footer>
+    </div>
   </body>
 </html>
