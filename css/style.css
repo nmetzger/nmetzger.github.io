@@ -213,6 +213,10 @@ h6{
   padding-bottom: 0;
 }
 
+p.isolated {
+  padding-top: 2.4rem;
+}
+
 .user-quotes p {
   font-size: 1.8rem;
   font-family: 'lora', serif;
@@ -235,7 +239,7 @@ a:visited {
   color: #aaaaaa;
 }
 
-.link-button {
+.link-button, .link-button-inactive {
   background-color: #3891A6;
   border: none;
   border-radius: 2.4rem;
@@ -251,13 +255,13 @@ a:visited {
   width: 15rem;
 }
 
-.link-button:visited, .link-button:link, .link-button a{
-  color: #F6F8F8;
+.link-button-inactive {
+  background-color: #69626D;
+  cursor: none;
 }
 
-
-.link-button:hover {
-  background-color: #FF951C;
+.link-button:visited, .link-button:link, .link-button a{
+  color: #F6F8F8;
 }
 
 footer a:link {
@@ -267,6 +271,14 @@ footer a:link {
 
 a:hover{
   color: #3891A6;
+}
+
+.link-button:hover {
+  background-color: #FF951C;
+}
+
+.link-button a:hover {
+  color: #FFFFFF;
 }
 
 /* NAVIGATION */
@@ -291,8 +303,7 @@ nav ul {
 
 nav li a {
   display: block;
-  padding: 20px 20px;
-  /*border-right: 1px solid #f4f4f4;*/
+  padding: 2rem 2rem;
   text-decoration: none;
 }
 
@@ -303,7 +314,7 @@ nav .menu-btn:hover {
 
 nav .nav-logo {
   float: left;
-  padding: 10px 20px;
+  padding: 1rem 2rem;
   text-decoration: none;
 }
 
@@ -327,7 +338,7 @@ nav .menu-icon {
   cursor: pointer;
   display: inline-block;
   float: right;
-  padding: 28px 20px;
+  padding: 2.8rem 2rem;
   position: relative;
   user-select: none;
 }
@@ -335,10 +346,10 @@ nav .menu-icon {
 nav .menu-icon .navicon {
   background: #333;
   display: block;
-  height: 2px;
+  height: 0.2rem;
   position: relative;
   transition: background .2s ease-out;
-  width: 18px;
+  width: 1.8rem;
 }
 
 nav .menu-icon .navicon:before,
@@ -353,11 +364,11 @@ nav .menu-icon .navicon:after {
 }
 
 nav .menu-icon .navicon:before {
-  top: 5px;
+  top: 0.5rem;
 }
 
 nav .menu-icon .navicon:after {
-  top: -5px;
+  top: -0.5rem;
 }
 
 /* menu btn */
@@ -367,7 +378,7 @@ nav .menu-btn {
 }
 
 nav .menu-btn:checked ~ .menu {
-  max-height: 240px;
+  max-height: 24rem;
 }
 
 nav .menu-btn:checked ~ .menu-icon .navicon {
@@ -416,8 +427,8 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 
 .hero-copy img {
   position: relative;
-  top: 10px;
-  left: -10px;
+  top: 1rem;
+  left: -1rem;
 }
 
 .hero-stripe {
@@ -569,7 +580,7 @@ project-illustrations-gap {
 }
 
 .case-study-problem, .case-study-conclusion{
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 .case-study-conclusion .case-study-section {
@@ -577,47 +588,47 @@ project-illustrations-gap {
 }
 
 .case-study-page .link-button {
-  margin: 20px 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .case-study-section {
   background: #F6F8F8;
   margin-bottom: 2.4rem;
-  padding: 0 36px 26px 36px;
+  padding: 0 3.6rem 2.6rem 3.6rem;
 }
 
 .case-study-sub-section{
   background: #F6F8F8;
-  margin-bottom: 24px;
-  padding: 60px 36px 26px 36px;
+  margin-bottom: 2.4rem;
+  padding: 6rem 3.6rem 2.6rem 3.6rem;
 }
 
 .case-study-section img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding: 60px 0 20px 0;
+  padding: 6rem 0 2rem 0;
 }
 
 .case-study-problem img{
-  padding-top: 20px;
+  padding-top: 2rem;
 }
 
 .case-study-problem .case-study-section {
-  padding-top: 18px;
+  padding-top: 1.8rem;
 }
 
 .stripe {
   width: 100%;
-  border-bottom: 32px solid #FEC308;
+  border-bottom: 3.2rem solid #FEC308;
   grid-area: stripe;
 }
 
 .case-study-highlight {
   background: #3891A6;
   color: #ffffff;
-  margin-bottom: 24px;
-  padding: 60px 36px 36px 36px;
+  margin-bottom: 2.4rem;
+  padding: 6rem 3.6rem 3.6rem 3.6rem;
 }
 
 #stats-image img {
@@ -629,11 +640,11 @@ project-illustrations-gap {
 
 .user-quotes {
   border-style: solid;
-  border-width: 2px;
+  border-width: 0.2rem;
   border-color: #C6BBC4;
-  border-radius: 20px;
-  padding: 28px 28px 0 28px;
-  margin-bottom: 20px;
+  border-radius: 2rem;
+  padding: 2.8rem 2.8rem 0 2.8rem;
+  margin-bottom: 2rem;
 }
 
 .side-stripe {
@@ -649,11 +660,11 @@ project-illustrations-gap {
 .case-study-label {
   background: #F6F8F8;
   grid-area: case-study-label;
-  margin-top:44px;
+  margin-top:4.4rem;
 }
 
 .case-study-copy {
-  padding: 50px 36px;
+  padding: 5rem 3.6rem;
   background: #F6F8F8;
   grid-area: case-study-copy;
 }
@@ -664,7 +675,7 @@ project-illustrations-gap {
 
 .case-study-image img{
   width: 100%;
-  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
 }
 
 .roles {
@@ -689,7 +700,7 @@ footer {
   display: flex;
   flex-direction: column;
   grid-area: footer;
-  height: 268px;
+  height: 26.8rem;
   justify-content: center;
   text-align: center;
   grid-row: span 3;
@@ -702,7 +713,7 @@ footer {
 }
 
 .social-buttons img{
-  margin: 20px 10px 0 10px;
+  margin: 2rem 1rem 0 1rem;
 }
 
 /*-----------------------MEDIA tablet------------------------*/
@@ -731,7 +742,7 @@ footer {
     float: left;
   }
   nav li a {
-    padding: 20px 30px;
+    padding: 2rem 3rem;
   }
   nav .menu {
     clear: none;
@@ -829,14 +840,14 @@ footer {
   
   .portrait-lg {
     background-repeat: no-repeat;
-	background-size: 306px;
+	background-size: 30.6rem;
     background-image: url(../images/portrait.jpg);
 	background-color: #ffffff;
-    height: 500px;
+    height: 50rem;
   }
   
   .hero-copy {
-	padding: 22px 84px 50px 84px;
+	padding: 2.2rem 8.4rem 5rem 8.4rem;
     width: auto;
   }
   
@@ -854,7 +865,7 @@ footer {
     background: #F6F8F8;
     display: grid;
     grid-template-columns: 46rem 1fr 1fr;
-    grid-gap: 0 24px;
+    grid-gap: 0 2.4rem;
     justify-items: left;
     overflow: hidden;
   }
@@ -876,10 +887,10 @@ footer {
   
   /* display a border between project copy and image */
   .project-brainspace-gap, .project-actioncats-gap {
-	border-left: 24px solid white;
+	border-left: 2.4rem solid white;
     display:inline-block;
     height: 100%;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 10rem;
 	overflow: hidden;
 	position: relative;
     -webkit-transform: skew(-15deg);
@@ -894,7 +905,7 @@ footer {
   }
   
   .project-brainspace:hover .project-brainspace-copy {
-    background: #E8E3E7;
+    background: #E9EEEE;
   }
 
   .project-actioncats:hover .project-actioncats-lg {
@@ -902,7 +913,7 @@ footer {
   }
   
   .project-actioncats:hover .project-actioncats-copy {
-    background: #E8E3E7;
+    background: #E9EEEE;
   }
   
   .project-brainspace-lg{
@@ -918,12 +929,12 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
-    bottom: 0px;
+    bottom: 0;
     display: block;
-    left: -90px;
+    left: -9rem;
     position: absolute;
-    right: -100px;
-    top: 0px;
+    right: -10rem;
+    top: 0;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     -o-transform: skew(15deg);
@@ -934,7 +945,7 @@ footer {
   .project-blocjams, .project-illustrations {
     display: grid;
     grid-template-columns: 46rem 1fr 1fr;
-    grid-gap: 0 24px;
+    grid-gap: 0 2.4rem;
 	justify-items: right;
 	background: #F6F8F8;
   }
@@ -948,23 +959,23 @@ footer {
   
   .project-blocjams-copy, .project-illustrations-copy {
     background: #F6F8F8;
-    height: 256px;
-    padding: 50px 84px 44px 0;
+    height: 25.6rem;
+    padding: 5rem 8.4rem 4.4rem 0;
     text-align: left;
-    width: 446px;
+    width: 44.6rem;
   }
   
   /* display a border between project copy and image */
   .project-blocjams-gap, .project-illustrations-gap {
     width: 100%;
 	height: 100%;
-    margin: 0 60px 0 0px;
+    margin: 0 6rem 0 0;
     display:inline-block;
 	-webkit-transform: skew(-15deg);
 	-moz-transform: skew(-15deg);
 	-o-transform: skew(-15deg);
 	transform: skew(-15deg);
-	border-right: 24px solid white;
+	border-right: 2.4rem solid white;
 	overflow: hidden;
 	position: relative;
   }
@@ -974,7 +985,7 @@ footer {
   }
 
   .project-blocjams:hover .project-blocjams-copy, .project-blocjams:hover{
-    background: #E8E3E7;
+    background: #E9EEEE;
   }
 
   .project-illustrations:hover .project-illustrations-lg {
@@ -982,7 +993,7 @@ footer {
   }
   
   .project-illustrations:hover .project-illustrations-copy, .project-illustrations:hover{
-    background: #E8E3E7;
+    background: #E9EEEE;
   }
   
   .project-blocjams-lg {
@@ -1000,7 +1011,7 @@ footer {
     background-position: left;
     bottom: 0;
     display: block;
-    left: 8.2rem;
+    left: 6.2rem;
     position: absolute;
     right: -4rem;
     top: 0;
@@ -1010,7 +1021,7 @@ footer {
     transform: skew(15deg);
   }
   
-  .link-button {
+  .link-button, .link-button-inactive {
     margin: 6rem 0 0 0;
   } 
   
@@ -1018,6 +1029,10 @@ footer {
   /* CASE STUDY - Media Desktop */
   .case-study-page {
     width: 96rem;
+  }
+  
+  p.isolated {
+    padding-top: 6.4rem;
   }
   
   .side-stripe {
@@ -1042,39 +1057,45 @@ footer {
     background: #F6F8F8;
     display: grid;
     grid-template-columns: 46rem 1fr 1fr;
-    grid-gap: 0 24px;
+    grid-gap: 0 2.4rem;
     justify-items: left;
     overflow: hidden;
-    margin-bottom: 24px;
+    margin-bottom: 2.4rem;
   }
   
   .solution-image-gap {
 	height: 100%;
-	border-left: 24px solid white;
+	border-left: 2.4rem solid white;
     display:inline-block;
-    margin: 0 0 0 100px;
+    margin: 0 0 0 5rem;
 	overflow: hidden;
 	position: relative;
     -webkit-transform: skew(-15deg);
 	-moz-transform: skew(-15deg);
 	-o-transform: skew(-15deg);
 	transform: skew(-15deg);
-    width: 41rem;
+    width: 60rem;
   }
   
   .solution-image {
     display: block;
+    background-repeat:no-repeat;
+    width: 80rem;
+    position: relative;
+    left: -10rem;
+    height:100%;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     -o-transform: skew(15deg);
     transform: skew(15deg);
   }
   
-  .solution-image img{
-    margin: 0;
-    padding: 0;
-    width: 110%;
-    height: 110%;
+  #brainspace-solution-image.solution-image {
+    background-image: url(../images/brainspace-images/Landing-Page.png);
+  }
+  
+  #action-cats-solution-image.solution-image {
+    background-image: url(../images/actioncats-images/ActionCatsPic.jpg);
   }
   
   .triangle-bullets:not(.visual-design ul) {
