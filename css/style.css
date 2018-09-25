@@ -13,12 +13,49 @@ html {
 }
 
 body {
+  color: #69626D;
   font-family: 'aileron', sans-serif;
   font-size: 14px;
   font-weight: 400;
-  color: #69626D;
 }
 
+
+/* ANIMATION DEFINITIONS */
+@keyframes slide-in {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  50% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-reverse {
+  0% {
+    right: -100%;
+    opacity: 0;
+  }
+  50% {
+    right: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    top: -100%;
+    opacity: 0;
+  }
+  50% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+
+/* CONTAINERS */
 .container {
   background-color: #FFFFFF;
   display: grid;
@@ -27,7 +64,7 @@ body {
     "hero"
     "hero-stripe"
     "project-brainspace"
-    "project-blocjams"
+    "project-gameapp"
     "project-actioncats"
     "project-illustrations"
     "footer-stripe"
@@ -61,12 +98,15 @@ body {
   grid-template-areas: 
     "about-portrait"
     "about"
-    "footer-stripe"
-    "footer";
+    "stripe"
+    "contact-form";
   grid-gap: 2.4rem 0;
   margin: 0 auto;
   width: 100%;
 }
+
+
+/* OTHER ELEMENTS */
 
 hr {
   background-color: #C6BBC4;
@@ -77,9 +117,7 @@ hr {
 }
 
 .triangle-bullets {
-  padding-bottom: 1.6rem;
-  padding-top: 1.6rem;
-  padding-left: 1.5rem;
+  padding: 1.6rem 1.6rem 1.6rem 0;
 }
 
 /* triangle bullet points */
@@ -250,8 +288,8 @@ a:visited {
   padding: 1.6rem;
   margin: 4rem auto 1.6rem auto;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
+  text-transform: uppercase;
   width: 15rem;
 }
 
@@ -275,6 +313,11 @@ a:hover{
 
 .link-button:hover {
   background-color: #FF951C;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
 }
 
 .link-button a:hover {
@@ -284,7 +327,7 @@ a:hover{
 /* NAVIGATION */
 
 nav {
-  background-color: #fff;
+  background-color: #FFFFFF;
   grid-row: 1;
   position: fixed;
   margin: 0 auto;
@@ -293,12 +336,12 @@ nav {
 }
 
 nav ul {
+  background-color: #FFFFFF;
+  list-style: none;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   text-align: right;
-  list-style: none;
-  overflow: hidden;
-  background-color: #fff;
 }
 
 nav li a {
@@ -371,7 +414,7 @@ nav .menu-icon .navicon:after {
   top: -0.5rem;
 }
 
-/* menu btn */
+/* menu button */
 
 nav .menu-btn {
   display: none;
@@ -409,7 +452,9 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
   padding-top: 3rem;
 }
 .portrait-lg{
+  animation: slide-in 2.2s ease;
   grid-area: hero-portrait-large;
+  position: relative;
 }
 
 .portrait img{
@@ -426,20 +471,22 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 .hero-copy img {
+  left: -1rem;
   position: relative;
   top: 1rem;
-  left: -1rem;
 }
 
 .hero-stripe {
+  animation: slide-in-reverse 2.2s ease;
+  background: #FEC308;
+  display: block; 
+  grid-area: hero-stripe;
+  height: 7.4rem;
   margin-top: 2.4rem;
   margin-bottom: 2.4rem;
   padding: 0;
+  position: relative;
   width: 100%;
-  height: 7.4rem;
-  display: block; 
-  grid-area: hero-stripe;
-  background: #FEC308;  
 }
 
 header {
@@ -447,7 +494,7 @@ header {
 }
 
 /* PROJECTS */
-.project-brainspace, .project-blocjams, .project-actioncats, .project-illustrations {
+.project-brainspace, .project-gameapp, .project-actioncats, .project-illustrations {
   text-align: center;
 }
 
@@ -493,26 +540,26 @@ project-actioncats-gap {
 }
 
 .project-brainspace-copy {
-  background-image: url(../images/brainspace-mobile.jpg);
+  background-image: url(../images/brainspace-mobile.png);
   background-position: center;
   grid-area: project-brainspace-copy;
 }
 
 .project-actioncats-copy {
-  background-image: url(../images/action-cats-mobile.jpg);
+  background-image: url(../images/action-cats-mobile.png);
   background-position: center;
   grid-area: project-actioncats-copy;
 }
 
-/* Bloc Jams/Illustrations Projects */
-.project-blocjams {
-  grid-area: project-blocjams;
+/* Game App/Illustrations Projects */
+.project-gameapp {
+  grid-area: project-gameapp;
 }
 .project-illustrations {
   grid-area: project-illustrations;
 }
 
-.project-blocjams-copy, .project-illustrations-copy {
+.project-gameapp-copy, .project-illustrations-copy {
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
@@ -520,12 +567,12 @@ project-actioncats-gap {
   padding: 4rem 3rem 2rem 3rem;
 }
 
-.project-blocjams-lg {
-  grid-area: project-blocjams-lg;
+.project-gameapp-lg {
+  grid-area: project-gameapp-lg;
 }
 
-project-blocjams-gap {
-  grid-area: project-blocjams-gap;
+project-gameapp-gap {
+  grid-area: project-gameapp-gap;
 }
 
 .project-illustrations-lg {
@@ -536,19 +583,19 @@ project-illustrations-gap {
   grid-area: project-illustrations-gap;
 }
 
-.project-blocjams-lg, .project-illustrations-lg img{
+.project-gameapp-lg, .project-illustrations-lg img{
   display: block;
   overflow: hidden;
 }
 
-.project-blocjams-copy {
-  background-image: url(../images/bloc-jams-mobile.jpg);
+.project-gameapp-copy {
+  background-image: url(../images/gameapp-mobile.png);
   background-position: center;
-  grid-area: project-blocjams-copy;
+  grid-area: project-gameapp-copy;
 }
 
 .project-illustrations-copy {
-  background-image: url(../images/illustrations-mobile.jpg);
+  background-image: url(../images/illustrations-mobile.png);
   background-position: center top;
   grid-area: project-illustrations-copy;
 }
@@ -566,12 +613,16 @@ project-illustrations-gap {
 }
 
 .about-title h3, .about-title p {
+  animation: slide-in 2.2s ease;
   text-align: center;
+  position: relative;
 }
 
 .about-portrait-lg {
-  grid-area: about-portrait;
+  animation: slide-in-reverse 2.2s ease;
   display: none;
+  grid-area: about-portrait;
+  position: relative;
 }
 
 /* CASE STUDY */
@@ -619,23 +670,46 @@ project-illustrations-gap {
 }
 
 .stripe {
-  width: 100%;
+  animation: slide-in-reverse 2.2s ease;
   border-bottom: 3.2rem solid #FEC308;
   grid-area: stripe;
+  position: relative;
+  width: 100%;
+}
+
+.data1{
+  color: #7CE9FF;
+  font-weight: 800;
+}
+
+.data2{
+  color: #FEC308;
+  font-weight: 800;
+}
+
+.data3{
+  color: #FF951C;
+  font-weight: 800;
+}
+
+.data4{
+  color: #FFA8BA;
+  font-weight: 800;
 }
 
 .case-study-highlight {
   background: #3891A6;
   color: #ffffff;
   margin-bottom: 2.4rem;
-  padding: 6rem 3.6rem 3.6rem 3.6rem;
+  padding: 2.4rem 3.6rem 3.6rem 3.6rem;
 }
 
-#stats-image img {
-  width: 100%;
+#brainspace-stats-image {
+  width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 2.4rem;
 }
 
 .user-quotes {
@@ -643,14 +717,17 @@ project-illustrations-gap {
   border-width: 0.2rem;
   border-color: #C6BBC4;
   border-radius: 2rem;
-  padding: 2.8rem 2.8rem 0 2.8rem;
+  padding: 0rem 2.8rem 1rem 2.8rem;
   margin-bottom: 2rem;
+  margin-top: 3rem;
 }
 
 .side-stripe {
-  grid-area: side-stripe;
+  animation: slide-in 2.2s ease;
   background-color: #3891A6; 
   display: none;
+  grid-area: side-stripe;
+  position: relative;
 }
 
 .case-study-page .stripe {
@@ -664,9 +741,9 @@ project-illustrations-gap {
 }
 
 .case-study-copy {
-  padding: 5rem 3.6rem;
   background: #F6F8F8;
   grid-area: case-study-copy;
+  padding: 5rem 3.6rem;
 }
 
 .case-study-image {
@@ -674,8 +751,8 @@ project-illustrations-gap {
 }
 
 .case-study-image img{
-  width: 100%;
   margin-bottom: 2.4rem;
+  width: 100%;
 }
 
 .roles {
@@ -700,10 +777,10 @@ footer {
   display: flex;
   flex-direction: column;
   grid-area: footer;
+  grid-row: span 3;
   height: 26.8rem;
   justify-content: center;
   text-align: center;
-  grid-row: span 3;
 }
 
 .footer-logo img{
@@ -714,6 +791,176 @@ footer {
 
 .social-buttons img{
   margin: 2rem 1rem 0 1rem;
+}
+
+.fa {
+  color: white;
+  padding: 1rem;
+}
+
+.fa:hover {
+  color: #FEC308;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+
+/* CONTACT FORM */
+.form-box{
+  background-color: #3891A6;
+  grid-area: contact-form;
+  padding: 3.6rem 0;
+  text-align: center;
+}
+
+.form-box h3 {
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.form-box p{
+  color: #F8F6F6;
+  font-weight: 200;
+  padding: 2rem 6.6rem;
+}
+
+form {
+  margin: 0 auto;
+  padding: 3rem;
+  width: 80%;
+}
+
+form .field {
+  margin-bottom: 1.5rem;
+  position: relative;
+  width: 100%;
+}
+
+form .field label {
+  background: #F8F6F6;
+  -moz-border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  color: #cccccc;
+  font-size: 1.6rem;
+  left: 0;
+  letter-spacing: 0.075rem;
+  padding: 2rem 0;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+  width: 100%;
+}
+
+form .field label + span {
+  color: white;
+  display: block;
+  font-size: 1.4rem;
+  left: 7%;
+  opacity: 0;
+  position: absolute;
+  top: 1.2rem;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"],
+form .field textarea {
+  background: #FFFFFF;
+  border: none;
+  -moz-border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  border-radius: 0.8rem;
+  color: #313A3D;
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  margin: 0;
+  padding: 20px 0;
+  padding-left: 19%;
+  width: 100%;
+}
+
+form .field input[type="text"]#msg,
+form .field textarea#msg {
+  height: 5.6rem;
+  resize: none;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;56
+  transition: all 333ms ease-in-out;
+}
+
+form .field input[type="text"]:focus, form .field input[type="text"].focused,
+form .field textarea:focus,
+form .field textarea.focused {
+  outline: none;
+}
+
+form .field input[type="text"]:focus#msg, form .field input[type="text"].focused#msg,
+form .field textarea:focus#msg,
+form .field textarea.focused#msg {
+  padding-bottom: 15rem;
+}
+
+form .field input[type="text"]:focus + label, form .field input[type="text"].focused + label,
+form .field textarea:focus + label,
+form .field textarea.focused + label {
+  background: #FD9638;
+  color: #F6F8F8;
+  width: 18%; 
+}
+
+form .field input[type="text"].focused + label,
+form .field textarea.focused + label {
+  color: #FD9638;
+}
+
+form .field:hover label {
+  width: 18%;
+  background: #313A3D;
+  color: white;
+}
+
+form input[type="submit"] {
+  background: #FEC308;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 2.4rem;
+  color: #3891A6;
+  font-size: 1.4rem;
+  font-family: 'Lato', sans-serif;
+  padding: 1.3rem 5rem;
+  position: relative;
+  text-transform: uppercase;
+  -webkit-transition: all 333ms ease-in-out;
+  -moz-transition: all 333ms ease-in-out;
+  -o-transition: all 333ms ease-in-out;
+  -ms-transition: all 333ms ease-in-out;
+  transition: all 333ms ease-in-out;
+}
+
+form input[type="submit"]:hover {
+  background: #FF951C;
+  color: #FFFFFF;
+}
+
+form input[type="submit"]:focus {
+  outline: none;
+}
+
+form ::placeholder {
+    color: #CCCCCC;
 }
 
 /*-----------------------MEDIA tablet------------------------*/
@@ -741,17 +988,21 @@ footer {
   nav li {
     float: left;
   }
+  
   nav li a {
     padding: 2rem 3rem;
   }
+  
   nav .menu {
     clear: none;
     float: right;
     max-height: none;
   }
+  
   nav .menu-icon {
     display: none;
   }
+  
   
   /* FOOTER - Media Tablet */
   .bottom-stripe {
@@ -771,28 +1022,27 @@ footer {
 
 @media screen and (min-width: 991px) {
   .container {
-    grid-template-columns: 30.6rem 1fr;
     grid-gap: 2.4rem;
-    grid-template-rows: auto;
+    
     grid-template-areas: 
     "side-stripe case-study-label"
     "side-stripe case-study-copy"
     "hero-portrait-large hero"
     "hero-portrait-large hero-stripe"
     "project-brainspace project-brainspace"
-    "project-blocjams project-blocjams"
+    "project-gameapp project-gameapp"
     "project-actioncats project-actioncats"
     "project-illustrations project-illustrations"
     "footer-stripe footer-stripe"
     "footer footer";
-    padding-top: 1rem;
+    grid-template-columns: 30.6rem 1fr;
+    grid-template-rows: auto;
+    padding-top: 1.6rem;
     width: 96rem;
   }
   
   .case-study-container {
-    grid-template-columns: 14rem 1fr;
     grid-gap: 2.4rem;
-    grid-template-rows: auto;
     grid-template-areas: 
     "side-stripe case-study-label"
     "side-stripe case-study-copy"
@@ -801,24 +1051,27 @@ footer {
     "case-study-page case-study-page"
     "footer-stripe footer-stripe"
     "footer footer";
-    padding-top: 5rem;
+    grid-template-columns: 14rem 1fr;
+    grid-template-rows: auto;
+    padding-top: 5.8rem;
     width: 96rem;
   }
   
   .about-container {
     background-color: #FFFFFF;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-gap: 2.4rem 2.4rem;
     grid-template-areas: 
     "about about-portrait"
-    "footer-stripe footer-stripe"
-    "footer footer";
-    grid-gap: 2.4rem 2.4rem;
-    margin: 8rem auto 0 auto;
+    "stripe stripe"
+    "contact-form contact-form";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin: 6rem auto 0 auto;
     overflow: hidden;
     width: 96rem;
   }
+  
   
   /* NAVIGATION - Media Desktop */
   .nav-container {
@@ -833,16 +1086,17 @@ footer {
     width: 98rem;
   }
   
+  
   /* HERO - Media Desktop */
   .portrait img, .portrait{
     display: none;
   }
   
   .portrait-lg {
+    background-color: #ffffff;
+    background-image: url(../images/portrait.jpg);
     background-repeat: no-repeat;
 	background-size: 30.6rem;
-    background-image: url(../images/portrait.jpg);
-	background-color: #ffffff;
     height: 50rem;
   }
   
@@ -864,8 +1118,8 @@ footer {
   .project-brainspace, .project-actioncats {
     background: #F6F8F8;
     display: grid;
-    grid-template-columns: 46rem 1fr 1fr;
     grid-gap: 0 2.4rem;
+    grid-template-columns: 46rem 1fr 1fr;
     justify-items: left;
     overflow: hidden;
   }
@@ -873,6 +1127,7 @@ footer {
   .project-brainspace {
     grid-template-areas: "project-brainspace-copy project-brainspace-gap project-brainspace-lg";
   }
+  
   .project-actioncats {
     grid-template-areas: "project-actioncats-copy project-actioncats-gap project-actioncats-lg";
   }
@@ -901,27 +1156,31 @@ footer {
   }
   
   .project-brainspace:hover .project-brainspace-lg {
-    background-image: url(../images/brainspace-hover.jpg);
+    background-image: url(../images/brainspace-hover.png);
   }
   
-  .project-brainspace:hover .project-brainspace-copy {
+  .project-brainspace:hover .project-brainspace-copy, .project-actioncats:hover .project-actioncats-copy {
     background: #E9EEEE;
   }
 
   .project-actioncats:hover .project-actioncats-lg {
-    background-image: url(../images/action-cats-hover.jpg);
-  }
-  
-  .project-actioncats:hover .project-actioncats-copy {
-    background: #E9EEEE;
+    background-image: url(../images/action-cats-hover.png);
   }
   
   .project-brainspace-lg{
-    background-image: url(../images/brainspace.jpg);
+    background-image: url(../images/brainspace.png);
   }
 
   .project-actioncats-lg{
-    background-image: url(../images/action-cats.jpg);
+    background-image: url(../images/action-cats.png);
+  }
+  
+  .project-brainspace:hover .project-brainspace-lg, .project-brainspace:hover .project-brainspace-copy, .project-actioncats:hover .project-actioncats-lg, .project-actioncats:hover .project-actioncats-copy, .project-gameapp:hover .project-gameapp-lg, .project-gameapp:hover .project-gameapp-copy, .project-gameapp:hover, .project-illustrations:hover .project-illustrations-lg, .project-illustrations:hover .project-illustrations-copy, .project-illustrations:hover{
+    -webkit-transition: all 333ms ease-in-out;
+    -moz-transition: all 333ms ease-in-out;
+    -o-transition: all 333ms ease-in-out;
+    -ms-transition: all 333ms ease-in-out;
+    transition: all 333ms ease-in-out;
   }
   
   /* displays the project image with opposite skew of parent element to straighten */
@@ -941,8 +1200,8 @@ footer {
     transform: skew(15deg);
   }
   
-  /* Bloc Jams/Illustrations Projects */
-  .project-blocjams, .project-illustrations {
+  /* Game App/Illustrations Projects */
+  .project-gameapp, .project-illustrations {
     display: grid;
     grid-template-columns: 46rem 1fr 1fr;
     grid-gap: 0 2.4rem;
@@ -950,14 +1209,15 @@ footer {
 	background: #F6F8F8;
   }
   
-  .project-blocjams {
-    grid-template-areas: "project-blocjams-lg project-brainspace-gap project-blocjams-copy";
+  .project-gameapp {
+    grid-template-areas: "project-gameapp-lg project-brainspace-gap project-gameapp-copy";
   }
+  
   .project-illustrations {
     grid-template-areas: "project-illustrations-lg project-illustrations-gap project-illustrations-copy";
   }
   
-  .project-blocjams-copy, .project-illustrations-copy {
+  .project-gameapp-copy, .project-illustrations-copy {
     background: #F6F8F8;
     height: 25.6rem;
     padding: 5rem 8.4rem 4.4rem 0;
@@ -966,49 +1226,45 @@ footer {
   }
   
   /* display a border between project copy and image */
-  .project-blocjams-gap, .project-illustrations-gap {
-    width: 100%;
+  .project-gameapp-gap, .project-illustrations-gap {
+    border-right: 2.4rem solid white;
+    display:inline-block;
 	height: 100%;
     margin: 0 6rem 0 0;
-    display:inline-block;
-	-webkit-transform: skew(-15deg);
+	overflow: hidden;
+	position: relative;
+    -webkit-transform: skew(-15deg);
 	-moz-transform: skew(-15deg);
 	-o-transform: skew(-15deg);
 	transform: skew(-15deg);
-	border-right: 2.4rem solid white;
-	overflow: hidden;
-	position: relative;
+    width: 100%;
   }
   
-  .project-blocjams:hover .project-blocjams-lg {
-    background-image: url(../images/bloc-jams-hover.jpg);
+  .project-gameapp:hover .project-gameapp-lg {
+    background-image: url(../images/gameapp-hover.png);
   }
 
-  .project-blocjams:hover .project-blocjams-copy, .project-blocjams:hover{
+  .project-gameapp:hover .project-gameapp-copy, .project-gameapp:hover, .project-illustrations:hover .project-illustrations-copy, .project-illustrations:hover{
     background: #E9EEEE;
   }
 
   .project-illustrations:hover .project-illustrations-lg {
-    background-image: url(../images/illustrations-hover.jpg);
+    background-image: url(../images/illustrations-hover.png);
   }
-  
-  .project-illustrations:hover .project-illustrations-copy, .project-illustrations:hover{
-    background: #E9EEEE;
-  }
-  
-  .project-blocjams-lg {
-    background-image: url(../images/bloc-jams.jpg);
+    
+  .project-gameapp-lg {
+    background-image: url(../images/gameapp.png);
   }
 
   .project-illustrations-lg {
-    background-image: url(../images/illustrations.jpg);
+    background-image: url(../images/illustrations.png);
   }
   
   /* displays the project image with opposite skew of parent element to straighten */
-  .project-blocjams-lg, .project-illustrations-lg{
+  .project-gameapp-lg, .project-illustrations-lg{
+    background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left;
     bottom: 0;
     display: block;
     left: 6.2rem;
@@ -1056,17 +1312,17 @@ footer {
   .case-study-problem {
     background: #F6F8F8;
     display: grid;
-    grid-template-columns: 46rem 1fr 1fr;
     grid-gap: 0 2.4rem;
+    grid-template-columns: 46rem 1fr 1fr;
     justify-items: left;
-    overflow: hidden;
     margin-bottom: 2.4rem;
+    overflow: hidden;
   }
   
   .solution-image-gap {
-	height: 100%;
 	border-left: 2.4rem solid white;
     display:inline-block;
+    height: 100%;
     margin: 0 0 0 5rem;
 	overflow: hidden;
 	position: relative;
@@ -1078,16 +1334,16 @@ footer {
   }
   
   .solution-image {
-    display: block;
     background-repeat:no-repeat;
-    width: 80rem;
-    position: relative;
-    left: -10rem;
+    display: block;
     height:100%;
+    left: -12rem;
+    position: relative;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     -o-transform: skew(15deg);
     transform: skew(15deg);
+    width: 80rem;
   }
   
   #brainspace-solution-image.solution-image {
@@ -1103,6 +1359,7 @@ footer {
     padding-left: 1.5rem;
   }
   
+  
   /* ABOUT - Media Desktop /*
   /* display a border between project copy and image */
   .about {
@@ -1115,11 +1372,11 @@ footer {
   }
   
   .about-portrait-lg {
-    background-repeat: no-repeat;
     background-color: #3891A6;
     background-image: url(../images/about-portrait.png);
-    background-size: 34rem;
+    background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 34rem;
     display: block;
   }
   
@@ -1127,13 +1384,14 @@ footer {
     padding-top: 3rem;
   }
   
-    /* FOOTER - Media Desktop */
+  
+  /* FOOTER - Media Desktop */
   .bottom-stripe {
     margin: 0 auto;
     width: 96rem;
   }
   
-  footer {
+  footer{
     margin: 0 auto;
     width: 96rem; 
   }

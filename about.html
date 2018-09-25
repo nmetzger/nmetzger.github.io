@@ -8,6 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css">
     <link rel="stylesheet" type="text/css" href="css/normalize.css"> 
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <!-- Font Awesome Icons for Social Media -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   </head>
   <body>
@@ -27,8 +30,7 @@
 
           <ul class="menu">
             <li><a href="index.html">work</a></li>
-            <li><a href="about.html">about</a></li>
-            <li><a href="mailto:natalie@thefuzzyslug.com">contact</a></li>
+            <li><a href="about.html">about/contact</a></li>
           </ul>
       </nav>
     </div>
@@ -55,25 +57,43 @@
         </div>
       </article>
       <div class="about-portrait-lg"></div>
-    
-    <!-- FOOTER -->
-      <div class="bottom-stripe"></div>
-      <footer>
-        <section class="footer-logo">
-          <img src="images/logo-yellow.png" alt="Yellow personal logo">
-        </section>  
-        <section class="footer-connect">
-          <h3>Connect</h3>
-          <a href="mailto:natalie@thefuzzyslug.com">natalie@thefuzzyslug.com</a>
-        </section>
+      <div class="stripe"></div>
+      
+      <!-- CONTACT -->
+      <section id="hire" class="form-box">
+        <img class="form-logo" src="images/logo-yellow.png">
+        <h3>Let's Connect</h3>
+        <p>Like my work? Do you feel my work is a good fit for your project? Just feel like chatting? Feel free to drop me a note.</p>
         <section class="social-buttons">
-          <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><img src="images/social-linkedin.png" alt="LinkedIn icon"></a>
-          <a href="https://github.com/nmetzger"><img src="images/social-github.png" alt="GitHub icon"></a>
-          <a href="https://www.instagram.com/thefuzzyslug/"><img src="images/social-instagram.png" alt="Instagram icon"></a>
-          <a href="https://twitter.com/minitotoro"><img src="images/social-twitter.png" alt="Twitter icon"></a>
-          <a href="https://www.facebook.com/nsjmetzger"><img src="images/social-facebook.png" alt="Facebook icon"></a>
+          <a href="https://www.linkedin.com/in/natalie-metzger-39028631/"><i class="fa fa-linkedin fa-3x faa-linkedin animated-hover" aria-hidden="true"></i></a>
+          <a href="https://github.com/nmetzger"><i class="fa fa-github fa-3x" aria-hidden="true"></i></a>
+          <a href="https://www.instagram.com/thefuzzyslug/"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/minitotoro"><i class="fa fa-twitter fa-3x" aria-hidden="true"></i></a>
+          <a href="https://www.facebook.com/nsjmetzger"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
         </section>
-      </footer>
+        <form>
+              <div class="field name-box">
+                    <input type="text" id="name" placeholder="first and last name...">
+                    <label for="name">name</label>
+                    <span class="ss-icon">check</span>
+              </div>
+
+              <div class="field email-box">
+                <input type="text" id="email" placeholder="name@email.com">
+                    <label for="email">email</label>
+                    <span class="ss-icon">check</span>
+              </div>
+
+              <div class="field msg-box">
+                <textarea id="msg" rows="4" placeholder="type your message..."></textarea>
+                    <label for="msg">message</label>
+                    <span class="ss-icon">check</span>
+              </div>
+
+              <input class="button" type="submit" value="Send" />
+        </form>
+      </section>
+      <script src="js/contact.js"></script>
     </div>
   </body>
 </html>
