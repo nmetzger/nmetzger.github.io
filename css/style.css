@@ -15,7 +15,7 @@ html {
 body {
   color: #69626D;
   font-family: 'aileron', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -64,9 +64,9 @@ body {
     "hero"
     "hero-stripe"
     "project-brainspace"
-    "project-gameapp"
-    "project-actioncats"
+    /*"project-gameapp"*/
     "project-illustrations"
+    "project-actioncats"
     "footer-stripe"
     "footer";
   grid-gap: 2.4rem 0;
@@ -117,7 +117,7 @@ hr {
 }
 
 .triangle-bullets {
-  padding: 1.6rem 1.6rem 1.6rem 0;
+  padding: 1.6rem 1.6rem 1.6rem 2rem;
 }
 
 /* triangle bullet points */
@@ -128,7 +128,8 @@ hr {
   border-width: 0.4rem 0 0.4rem 0.7rem;  
   display: block;  
   height: 0; 
-  left: -1rem;
+  left: -2rem;
+  padding: 0 3rem;
   position: relative;
   top: 0.9rem; 
   width: 0;  
@@ -137,8 +138,8 @@ hr {
 
 /* FONTS */
 p {
-  font-size: 1.4rem;
-  line-height: 2.2rem;
+  font-size: 1.8rem;
+  line-height: 3rem;
   margin-top: 0.6rem;
 }
 
@@ -153,7 +154,8 @@ h1 {
 
 h2 {
   color: #3891A6;
-  font-family: 'lora', serif;
+  /*font-family: 'lora', serif;*/
+  font-family: "Playfair Display", serif;
   font-size: 6rem;
   font-weight: 900;
   line-height: 7.5rem;
@@ -176,9 +178,10 @@ h2 span{
 }
 
 h3 {
-  font-family: 'lora', serif;
+  /*font-family: 'lora', serif;*/
+  font-family: "Playfair Display", serif;
   font-size: 3.2rem;
-  font-weight: 600;
+  font-weight: 900;
   margin: 0;
 }
 
@@ -203,9 +206,8 @@ h4 {
   margin: 0;
 }
 
-.hero-copy h4 {
-  left: -2rem;
-  position: relative;
+.hero-copy h4{
+  padding-bottom: 0.8rem;
 }
 
 .case-study-label h4{
@@ -221,20 +223,20 @@ h5 {
 }
 
 h6{
-  font-family: 'lora', serif;
+  /*font-family: 'lora', serif;*/
+  font-family: "Playfair Display", serif;
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 900;
   margin: 0; 
   padding-bottom: 2rem;
   text-align: center;
 }
 
 .nav-name a {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
 }
 
 .hero p, .about-copy p{
-  line-height: 2.2rem;
   padding: 1rem 0 0 0;
   text-align: left;
 }
@@ -249,6 +251,8 @@ h6{
 
 .roles p{
   padding-bottom: 0;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }
 
 p.isolated {
@@ -257,7 +261,8 @@ p.isolated {
 
 .user-quotes p {
   font-size: 1.8rem;
-  font-family: 'lora', serif;
+  /*font-family: 'lora', serif;*/
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   text-align: center;
 }
@@ -352,7 +357,7 @@ nav li a {
 
 nav li a:hover,
 nav .menu-btn:hover {
-  background-color: #f4f4f4;
+  background-color: #f4f8f8;
 }
 
 nav .nav-logo {
@@ -471,9 +476,8 @@ nav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
 }
 
 .hero-copy img {
-  left: -1rem;
+  padding: 3.2rem 0 1.4rem 0;
   position: relative;
-  top: 1rem;
 }
 
 .hero-stripe {
@@ -560,9 +564,9 @@ project-actioncats-gap {
 }
 
 .project-gameapp-copy, .project-illustrations-copy {
-  background-color: #F6F6F6;
-  display: flex;
-  flex-direction: column;
+  background-color: #F6F8F8;
+  /*display: flex;
+  flex-direction: column;*/
   justify-content: center;
   padding: 4rem 3rem 2rem 3rem;
 }
@@ -614,8 +618,8 @@ project-illustrations-gap {
 
 .about-title h3, .about-title p {
   animation: slide-in 2.2s ease;
-  text-align: center;
   position: relative;
+  text-align: center;
 }
 
 .about-portrait-lg {
@@ -737,7 +741,7 @@ project-illustrations-gap {
 .case-study-label {
   background: #F6F8F8;
   grid-area: case-study-label;
-  margin-top:4.4rem;
+  margin-top: 6.4rem;
 }
 
 .case-study-copy {
@@ -990,7 +994,7 @@ form ::placeholder {
   }
   
   nav li a {
-    padding: 2rem 3rem;
+    padding: 2.6rem 3rem;
   }
   
   nav .menu {
@@ -1003,6 +1007,10 @@ form ::placeholder {
     display: none;
   }
   
+  nav li a:hover,
+  nav .menu-btn:hover {
+    background-color: #FFFFFF;
+  }
   
   /* FOOTER - Media Tablet */
   .bottom-stripe {
@@ -1023,21 +1031,18 @@ form ::placeholder {
 @media screen and (min-width: 991px) {
   .container {
     grid-gap: 2.4rem;
-    
     grid-template-areas: 
-    "side-stripe case-study-label"
-    "side-stripe case-study-copy"
     "hero-portrait-large hero"
     "hero-portrait-large hero-stripe"
     "project-brainspace project-brainspace"
-    "project-gameapp project-gameapp"
-    "project-actioncats project-actioncats"
+    /*"project-gameapp project-gameapp"*/
     "project-illustrations project-illustrations"
+    "project-actioncats project-actioncats"
     "footer-stripe footer-stripe"
     "footer footer";
     grid-template-columns: 30.6rem 1fr;
     grid-template-rows: auto;
-    padding-top: 1.6rem;
+    padding-top: 6.8rem;
     width: 96rem;
   }
   
@@ -1053,7 +1058,7 @@ form ::placeholder {
     "footer footer";
     grid-template-columns: 14rem 1fr;
     grid-template-rows: auto;
-    padding-top: 5.8rem;
+    padding-top: 6.8rem;
     width: 96rem;
   }
   
@@ -1086,6 +1091,11 @@ form ::placeholder {
     width: 98rem;
   }
   
+  nav li a:hover,
+  nav .menu-btn:hover {
+    background-color: #FFFFFF;
+  }
+  
   
   /* HERO - Media Desktop */
   .portrait img, .portrait{
@@ -1096,8 +1106,7 @@ form ::placeholder {
     background-color: #ffffff;
     background-image: url(../images/portrait.jpg);
     background-repeat: no-repeat;
-	background-size: 30.6rem;
-    height: 50rem;
+	background-size: 34rem;
   }
   
   .hero-copy {
@@ -1220,7 +1229,7 @@ form ::placeholder {
   .project-gameapp-copy, .project-illustrations-copy {
     background: #F6F8F8;
     height: 25.6rem;
-    padding: 5rem 8.4rem 4.4rem 0;
+    padding: 4rem 3.4rem 4.4rem 0;
     text-align: left;
     width: 44.6rem;
   }
@@ -1306,7 +1315,7 @@ form ::placeholder {
   .roles li {
     display: inline-block;
     vertical-align: top;
-    width: 33%;
+    width: 30%;
   }
   
   .case-study-problem {
@@ -1337,7 +1346,7 @@ form ::placeholder {
     background-repeat:no-repeat;
     display: block;
     height:100%;
-    left: -12rem;
+    left: -16rem;
     position: relative;
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
@@ -1382,6 +1391,10 @@ form ::placeholder {
   
   .about-title h3 {
     padding-top: 3rem;
+  }
+  
+  .about-title h3, .about-title p {
+    text-align: left;
   }
   
   
