@@ -143,6 +143,10 @@ p {
   margin-top: 0.6rem;
 }
 
+.case-study-section p{
+  text-align: center;
+}
+
 h1 {
   font-family: 'aileron', sans-serif;
   font-size: 6rem;
@@ -248,6 +252,10 @@ h6{
   padding-top: 1rem;
 }
 
+.case-study-highlight p{
+  text-align: center;
+}
+
 .roles p{
   padding-bottom: 0;
   font-size: 1.4rem;
@@ -259,17 +267,38 @@ p.isolated {
 }
 
 .user-quotes p {
-  font-size: 1.8rem;
-  /*font-family: 'lora', serif;*/
-  font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 600;
+  padding: 2rem;
   text-align: center;
 }
 
 /* LINKS */
 a {
   color: #FF951C;
-  outline: none;
+  /*outline: none;*/
+  text-decoration: none;
+  position: relative;
+}
+
+span.page-link a:before, span.page-link a:after {
+  content: '';
+  border-bottom: solid 2px #FF951C;
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+span.page-link a:before { left: 0; }
+span.page-link a:after { right: 0; }
+
+span.page-link a:hover:before, span.page-link a:hover:after {
+  width: 50%;
+}
+
+span.page-link a:before, span.page-link a:after {
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
 }
 
 a:link {
@@ -309,10 +338,6 @@ a:visited {
 footer a:link {
   color:#F6F8F8;
   font-weight:300;
-}
-
-a:hover{
-  color: #3891A6;
 }
 
 .link-button:hover {
@@ -707,18 +732,28 @@ project-illustrations-gap {
   padding: 2.4rem 3.6rem 3.6rem 3.6rem;
 }
 
-#brainspace-stats-image {
-  width: 80%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 2.4rem;
+.case-study-stats {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 2.6rem;
+}
+
+.column img {
+  margin: 0 auto;
+}
+
+.column {
+  display: flex;
+  flex: 100%;
+  max-width: 100%;
 }
 
 .user-quotes {
-  border-style: solid;
+  border-style: dashed;
   border-width: 0.2rem;
-  border-color: #C6BBC4;
+  border-color: #FEC308;
   border-radius: 2rem;
   padding: 0rem 2.8rem 1rem 2.8rem;
   margin-bottom: 2rem;
@@ -754,11 +789,10 @@ project-illustrations-gap {
 }
 
 .case-study-image img{
-  margin-bottom: 2.4rem;
   width: 100%;
 }
 
-.roles {
+.roles, .personas {
   text-align: center;
 }
 
@@ -766,6 +800,26 @@ project-illustrations-gap {
   display: none;
 }
 
+.personas-section {
+  background-color: #FFFFFF;
+  border-color: #FEC308;
+  border-radius: 2rem;
+  border-style: dashed;
+  border-width: 0.2rem;
+  padding: 0 6rem 6rem 6rem;
+}
+
+.personas li {
+  font-size: 1.8rem;
+  line-height: 3rem;
+  padding: 1rem 0;
+}
+
+.personas {
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+}
 
 /* FOOTER */
 .bottom-stripe {
@@ -975,6 +1029,19 @@ form ::placeholder {
     width: 57.5rem;
   }
   
+  .case-study-section p:not(li), .case-study-highlight p {
+    text-align: left;
+  }
+  
+  .case-study-section p.roles-paragraph {
+    text-align: center;
+  }
+  
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+
   /* NAVIGATION - Media Tablet*/
   .nav-container {
     background-color: #FFFFFF;
@@ -1075,6 +1142,20 @@ form ::placeholder {
     overflow: hidden;
     width: 96rem;
   }
+  
+  .case-study-section p, .case-study-highlight p {
+    text-align: left;
+  }
+  
+  .case-study-section p.roles-paragraph {
+    text-align: center;
+  }
+  
+  .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+  } 
   
   
   /* NAVIGATION - Media Desktop */
@@ -1311,10 +1392,32 @@ form ::placeholder {
     padding: 0 8rem 6rem 8rem;
   }
   
+  .personas-section {
+    background-color: #FFFFFF;
+    border-color: #FEC308;
+    border-radius: 2rem;
+    border-style: dashed;
+    border-width: 0.2rem;
+    padding: 0 6rem 6rem 6rem;
+  }
+  
   .roles li {
     display: inline-block;
     vertical-align: top;
     width: 30%;
+  }
+  
+  .personas li {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    padding: 1rem 0;
+  }
+  
+  .personas {
+    display: inline-block;
+    padding: 0 2rem;
+    vertical-align: top;
+    width: 49%;
   }
   
   .case-study-problem {
