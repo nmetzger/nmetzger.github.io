@@ -241,7 +241,7 @@ h6{
 
 .hero p, .about-copy p{
   padding: 1rem 0 0 0;
-  text-align: left;
+  text-align: center;
 }
 
 .article p {
@@ -271,6 +271,10 @@ p.isolated {
   font-weight: 600;
   padding: 2rem;
   text-align: center;
+}
+
+.quote {
+  font-style: italic;
 }
 
 /* LINKS */
@@ -637,7 +641,7 @@ project-illustrations-gap {
 
 .about-copy {
   background-color: #F6F8F8;
-  padding: 2.4rem 2.4rem 2.4rem 4.4rem;
+  padding: 2.4rem 4.4rem;
 }
 
 .about-title h3, .about-title p {
@@ -673,13 +677,13 @@ project-illustrations-gap {
 .case-study-section {
   background: #F6F8F8;
   margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
   padding: 0 3.6rem 2.6rem 3.6rem;
 }
 
 .case-study-sub-section{
   background: #F6F8F8;
-  margin-bottom: 2.4rem;
-  padding: 6rem 3.6rem 2.6rem 3.6rem;
+  padding-top: 5rem;
 }
 
 .case-study-section img {
@@ -729,6 +733,7 @@ project-illustrations-gap {
   background: #3891A6;
   color: #ffffff;
   margin-bottom: 2.4rem;
+  margin-top: 2.4rem;
   padding: 2.4rem 3.6rem 3.6rem 3.6rem;
 }
 
@@ -806,7 +811,9 @@ project-illustrations-gap {
   border-radius: 2rem;
   border-style: dashed;
   border-width: 0.2rem;
+  margin: 0 auto;
   padding: 0 6rem 6rem 6rem;
+  width: 80%
 }
 
 .personas li {
@@ -1029,17 +1036,17 @@ form ::placeholder {
     width: 57.5rem;
   }
   
-  .case-study-section p:not(li), .case-study-highlight p {
-    text-align: left;
-  }
-  
-  .case-study-section p.roles-paragraph {
+  .case-study-section p.roles-paragraph, .case-study-section p:not(li), .case-study-highlight p {
     text-align: center;
   }
   
   .column {
     flex: 50%;
     max-width: 50%;
+  }
+  
+  .personas-section {
+    width: 100%
   }
 
   /* NAVIGATION - Media Tablet*/
@@ -1143,11 +1150,11 @@ form ::placeholder {
     width: 96rem;
   }
   
-  .case-study-section p, .case-study-highlight p {
+  .case-study-section p, .case-study-section p:not(li) {
     text-align: left;
   }
   
-  .case-study-section p.roles-paragraph {
+  .case-study-highlight p, .case-study-section p.roles-paragraph {
     text-align: center;
   }
   
@@ -1156,6 +1163,10 @@ form ::placeholder {
     max-width: 25%;
     padding: 0 4px;
   } 
+  
+  .personas-section {
+    width: 100%
+  }
   
   
   /* NAVIGATION - Media Desktop */
@@ -1480,6 +1491,10 @@ form ::placeholder {
   .about-copy {
     width: 60rem;
     padding: 4rem 8.4rem 8.4rem 8.4rem; 
+  }
+  
+  .about-copy p {
+    text-align: left;
   }
   
   .about-portrait-lg {
