@@ -178,6 +178,11 @@ h2 span{
 .case-study-copy h2 {
   font-size: 4.8rem;
   padding-bottom: 3.6rem;
+  text-align: center;
+}
+
+.case-study-copy p{
+  text-align: center;
 }
 
 h3 {
@@ -215,7 +220,8 @@ h4 {
 
 .case-study-label h4{
   color: #3891A6;
-  padding: 3rem 0 3rem 3.6rem;
+  padding: 3rem 0 3rem 0rem;
+  text-align: center;
 }
 
 h5 {
@@ -337,6 +343,12 @@ a:visited {
 
 .link-button:visited, .link-button:link, .link-button a{
   color: #F6F8F8;
+}
+
+.case-study-page .link-button, .case-study-page .link-button-inactive {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
 }
 
 footer a:link {
@@ -797,6 +809,16 @@ project-illustrations-gap {
   width: 100%;
 }
 
+#top-image.case-study-image{
+  margin-bottom: -2.6rem;
+}
+
+.prototype iframe{
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
 .roles, .personas {
   text-align: center;
 }
@@ -1048,6 +1070,7 @@ form ::placeholder {
   .personas-section {
     width: 100%
   }
+  
 
   /* NAVIGATION - Media Tablet*/
   .nav-container {
@@ -1067,7 +1090,7 @@ form ::placeholder {
   }
   
   nav li a {
-    padding: 2.6rem 3rem;
+    padding: 2.6rem 2rem;
   }
   
   nav .menu {
@@ -1168,6 +1191,19 @@ form ::placeholder {
     width: 100%
   }
   
+  .link-button, .link-button-inactive {
+    left: 0;
+    transform: translate(0, 0);
+  }
+  
+  .case-study-label h4{
+    padding: 3rem 0 3rem 3.6rem;
+    text-align: left;
+  }
+  
+  .case-study-copy h2, .case-study-copy p {
+    text-align: left;
+  }
   
   /* NAVIGATION - Media Desktop */
   .nav-container {
