@@ -272,13 +272,6 @@ p.isolated {
   padding-top: 2.4rem;
 }
 
-.user-quotes p {
-  font-size: 2.8rem;
-  font-weight: 600;
-  padding: 2rem;
-  text-align: center;
-}
-
 .quote {
   font-style: italic;
 }
@@ -682,6 +675,14 @@ project-illustrations-gap {
   margin-bottom: 0;
 }
 
+.prototype iframe{
+  display: none;
+}
+
+.prototype-button{
+  display: block;
+}
+
 .case-study-page .link-button {
   margin: 2rem 0 0 0;
 }
@@ -767,16 +768,6 @@ project-illustrations-gap {
   max-width: 100%;
 }
 
-.user-quotes {
-  border-style: dashed;
-  border-width: 0.2rem;
-  border-color: #FEC308;
-  border-radius: 2rem;
-  padding: 0rem 2.8rem 1rem 2.8rem;
-  margin-bottom: 2rem;
-  margin-top: 3rem;
-}
-
 .side-stripe {
   animation: slide-in 2.2s ease;
   background-color: #3891A6;
@@ -819,7 +810,7 @@ project-illustrations-gap {
   transform: translate(-50%, 0);
 }
 
-.roles, .personas {
+.roles, .personas, .quote {
   text-align: center;
 }
 
@@ -1071,6 +1062,14 @@ form ::placeholder {
     width: 100%
   }
 
+  .prototype iframe{
+    display: block;
+  }
+
+  .prototype-button{
+    display: none;
+  }
+
 
   /* NAVIGATION - Media Tablet*/
   .nav-container {
@@ -1189,6 +1188,14 @@ form ::placeholder {
 
   .personas-section {
     width: 100%
+  }
+
+  .prototype iframe{
+    display: block;
+  }
+
+  .prototype-button{
+    display: none;
   }
 
   .link-button, .link-button-inactive {
